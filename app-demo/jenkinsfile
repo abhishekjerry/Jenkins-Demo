@@ -1,6 +1,11 @@
 pipeline {
     agent any
     stages{
+         stage("Echo"){
+            steps {
+                echo "Hi from 2nd stage"
+            }
+        }
         stage("Install Stage"){
             steps {
                 sh "npm install"
@@ -11,10 +16,6 @@ pipeline {
                sh "npm run build"
             }
         }
-        stage("Echo"){
-            steps {
-                echo "Hi from 2nd stage"
-            }
-        }
+       
     }
 }
