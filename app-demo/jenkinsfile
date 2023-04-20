@@ -6,5 +6,10 @@ pipeline {
                 "npm run build"
             }
         }
+        stage("Echo"){
+            steps {
+                echo "Hi from 2nd stage"
+            }
+        }
     }
 }
